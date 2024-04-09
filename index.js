@@ -105,8 +105,8 @@ app.delete("/posts/:id", (req,res)=>{
 const deletePost = posts.find((post)=> post.id === id)
 
 
-    posts.slice(posts.indexOf(deletePost),1)
-    
+    posts.splice(posts.indexOf(deletePost),1)
+
   res.json(posts)
 
 })
